@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a, b, c, d;
+	int h, m, s;
+	int total_time = 0;
+
+	cin >> a >> b >> c;
+	cin >> d;
+
+	total_time = a * 3600 + b * 60 + c + d;
+	h = total_time / 3600;
+	m = (total_time % 3600) / 60;
+	s = (total_time - 3600 * h - 60 * m) % 60;
+
+	if (h >= 24)
+	{
+		h = h % 24;
+	}
+
+	cout << h << " " << m << " " << s;
+}
