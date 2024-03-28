@@ -1,0 +1,54 @@
+#include <stdio.h> // C
+
+int main()
+{
+	int num;
+
+	scanf("%d", &num);
+
+	for (int i = 1; i <= num; i++)
+	{
+		for (int j = 0; j < i; j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+}
+
+import java.util.Scanner; // Java
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner cin = new Scanner(System.in);
+        int n = cin.nextInt();
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = n; j >= n - i; j--)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+#include <iostream> // C++
+using namespace std;
+
+int main()
+{
+	int n;
+
+	cin >> n;
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = n; j >= n - i; j--)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+}
