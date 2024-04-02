@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int x, y;
+	int result_3 = 0, result_4 = 0, result_5 = 0, result_6 = 0;
+
+	cin >> x;
+	cin >> y;
+
+	result_3 = x * (y % 10);
+	result_4 = x * ((y / 10) % 10);
+	result_5 = x * (y / 100);
+	result_6 = (result_3 + result_4 * 10 + result_5 * 100);
+
+	cout << result_3 << endl << result_4 << endl << result_5 << endl << result_6;
+}
