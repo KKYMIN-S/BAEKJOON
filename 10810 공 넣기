@@ -1,0 +1,25 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+	int n, m;
+	int i, j, k;
+
+	cin >> n >> m;
+	vector<int> bucket(n+1, 0); // 동적 배열 생성 및 초기화
+
+	for (int x = 1; x <= m; x++)
+	{
+		cin >> i >> j >> k;
+		for (int y = i; y <= j; y++)
+		{
+			bucket[y] = k;
+		}
+	}
+	for (int z = 1; z <= n; z++)
+	{
+		cout << bucket[z] << ' ';
+	}
+}
