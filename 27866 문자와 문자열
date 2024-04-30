@@ -1,0 +1,15 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main() 
+{
+	int num;
+	char str;
+	char word[1001];
+
+	fgets(word, sizeof(word), stdin);
+	
+	scanf("%d", &num);
+	str = word[num-1];
+	printf("%c", str);
+}
