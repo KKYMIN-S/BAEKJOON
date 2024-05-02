@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string input;
+    getline(cin, input);
+
+    for (char ch : input) 
+    {
+        cout << static_cast<int>(ch);
+    }
+
+    return 0;
+}
