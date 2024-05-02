@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	int t;
+
+	cin >> t;
+
+	int* q = new int[t];
+	int* d = new int[t];
+	int* n = new int[t];
+	int* p = new int[t];
+	int* c = new int[t];
+
+	for (int i = 0; i < t; i++)
+	{
+		cin >> c[i];
+		q[i] = c[i] / 25;
+		d[i] = (c[i] - q[i] * 25) / 10;
+		n[i] = (c[i] - q[i] * 25 - d[i] * 10) / 5;
+		p[i] = (c[i] - q[i] * 25 - d[i] * 10 - n[i] * 5) / 1;
+	}
+
+	for (int i = 0; i < t; i++)
+	{
+		cout << q[i] << " " << d[i] << " " << n[i] << " " << p[i] << " " << endl;
+	}
+}
