@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() 
+{
+	int num;
+	string test[11];
+	string word;
+
+	cin >> num;
+	cin.ignore();
+	
+	for (int i = 0; i < num; i++)
+	{
+		getline(cin, word);
+		test[i] = word;	
+	}
+
+	for (int i = 0; i < num; i++) 
+	{
+		cout << test[i][0] << test[i][test[i].length() - 1] << endl;
+	}
+}
