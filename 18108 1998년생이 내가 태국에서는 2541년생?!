@@ -1,0 +1,3 @@
+year1 = int(input(""))
+year2 = year1 - 543
+print(year2)
