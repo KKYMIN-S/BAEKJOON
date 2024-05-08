@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	int x; // 입력받은 분수
+	int count = 0, line = 1; // 분수 개수, 위치한 층
+	int numerator = 1, denominator = 1; // 분자, 분모
+
+	cin >> x;
+
+	while (count + line < x) // 입력받은 분수가 위치한 층 찾기
+	{
+		count += line;
+		line++;
+	}
+	
+	int i = 1;
+	if (line % 2 == 0)
+	{
+		while (x > i)
+		{
+			x -= i;
+			i++;
+		}
+		numerator = x;
+		denominator = i - x + 1;
+	}
+	else
+	{
+		while (x > i)
+		{
+			x -= i;
+			i++;
+		}
+		numerator = i - x + 1;
+		denominator = x;
+	}
+
+	cout << numerator << "/" << denominator;
+}
