@@ -1,0 +1,12 @@
+def solution(n):
+    num = list(map(int, input().split())) # 한 번에 여러 개의 정수를 입력받아 list로 저장
+    sum = 0
+    m = max(num)
+    for i in range(n):
+        sum += num[i]
+        mean = (sum / n) / m * 100
+    return mean
+
+n = int(input())
+result = solution(n)
+print(result)
