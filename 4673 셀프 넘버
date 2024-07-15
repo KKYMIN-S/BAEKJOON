@@ -1,0 +1,13 @@
+def solution(n):
+    self_numbers = list(range(1, n+1))
+
+    for i in range(1, n+1):
+        next_num = i + sum(map(int, list(str(i)))) # 원래 정수 + 원래 정수의 각 자릿수의 합(문자열로 변환)
+        if next_num <= n and next_num in self_numbers:
+            self_numbers.remove(next_num) # 생성자를 가지는 정수 제거
+
+    return self_numbers
+
+result = solution(10000)
+for num in result:
+    print(num)
