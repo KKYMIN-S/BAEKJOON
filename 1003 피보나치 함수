@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<int> fib_cache(100, -1);
+
+int fibonacci(int n)
+{
+    if (n <= 1)
+    {
+        return n;
+    }
+
+    if (fib_cache[n] != -1)
+    {
+        return fib_cache[n];
+    }
+    fib_cache[n] = fibonacci(n - 1) + fibonacci(n - 2);
+
+    return fib_cache[n];
+}
+
+int main()
+{ 
+    int n = 0, test_num;
+
+    cin >> test_num;
+    int array[100];
+    for (int i = 0; i < test_num; i++)
+    {
+        cin >> array[i];
+        
+        if ((n > 40) || (n < 0))
+            break;
+    }
+    for (int i = 0; i < test_num; i++)
+    {
+        n = array[i];
+        if (n == 0)
+            cout << "1 0" << endl;
+        else
+            cout << fibonacci(n - 1) << " " << fibonacci(n) << endl;
+    }
+}
