@@ -12,7 +12,7 @@ int main()
 		if (i == 0)
 			min = A;
 		if (A > max)
-			max = A;;
+			max = A;
 		if (A < min)
 			min = A;
 	}
