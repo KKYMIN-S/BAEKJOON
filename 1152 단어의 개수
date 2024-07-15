@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+
+int main() 
+{
+	int count = 0;
+	string s = "";
+	getline(cin, s);
+	stringstream ss(s);
+
+	while (ss >> s)
+	{
+		count++;
+	}
+	cout << count;
+}
