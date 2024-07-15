@@ -1,0 +1,13 @@
+def solution(n):
+    numbers = []
+    for i in range(k):
+        i = int(input())
+        numbers.append(i)
+        if i == 0:
+            numbers.pop() # list의 마지막 원소 삭제
+            numbers.pop()
+    result = sum(numbers)
+    return result
+
+k = int(input())
+print(solution(k))
