@@ -1,20 +1,16 @@
-n = int(input(""))
 def add_num_digits(n, original = None, count = 0):
     if original is None:
         original = n # 원래 숫자 저장
 
     x = (n % 10) + (n // 10) # 각 자리 수 더한 값 계산
-
-    if x < 10:
-        y = (n % 10) * 10 + x
-    else:
-        y = (n % 10) * 10 + (x % 10)
+    y = (n % 10) * 10 + (x % 10)
     count += 1
 
-    if y == original: 
+    if y == original:
         return count
     else:
         # 재귀 호출
         return add_num_digits(y, original, count)
 
+n = int(input())
 print(add_num_digits(n))
