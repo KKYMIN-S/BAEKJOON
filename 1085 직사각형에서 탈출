@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int x = 0, y = 0, w = 0, z = 0, x_diff, y_diff;
+	
+	cin >> x >> y >> w >> z;
+
+	x_diff = w - x;
+	y_diff = z - y;
+
+	int arr[4] = { x, y, x_diff, y_diff };
+	int min = arr[0];
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (min > arr[i])
+			min = arr[i];
+	}
+	cout << min << endl;
+}
