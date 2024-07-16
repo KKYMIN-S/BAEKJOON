@@ -1,0 +1,11 @@
+def solution():
+    n, m = map(int, input().split())
+    bucket = list(range(1, n+1))
+
+    for i in range(m):
+        a, b = map(int, input().split())
+        bucket[a-1:b] = reversed(bucket[a-1:b]) # 시작부터 끝까지 원소를 reversed()를 사용하여 역순으로 바꿈
+        
+    print(*bucket)
+
+solution()
