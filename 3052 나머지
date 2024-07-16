@@ -1,0 +1,14 @@
+def solution():
+    numbers = []
+    count = 0
+    for num in range(10):
+        num = int(input())
+        r_num = num % 42
+        numbers.append(r_num)
+
+    numbers = list(set(numbers)) # 중복 원소 제거 (set 이용)
+    count = len(numbers) # 원소 개수 세기
+    return count
+
+print(solution())
+
