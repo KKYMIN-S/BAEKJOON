@@ -1,0 +1,12 @@
+def solution():
+    numbers = list(range(1, 31)) # 1부터 30까지 원소를 가지는 list 생성
+    for num in range(28):
+        num = int(input())
+        numbers.remove(num)
+    min_value = min(numbers)
+    numbers.remove(min_value)
+    next_value = numbers[0]
+    print(min_value)
+    print(next_value)
+
+solution()
