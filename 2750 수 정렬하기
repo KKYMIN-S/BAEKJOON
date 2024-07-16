@@ -1,0 +1,12 @@
+def solution():
+    n = int(input())
+    numbers = []
+
+    for _ in range(n):
+        num = int(input())
+        numbers.append(num)
+    numbers.sort() # 오름차순 정렬
+    for i in range(len(numbers)):
+        print(numbers[i])
+
+solution()
