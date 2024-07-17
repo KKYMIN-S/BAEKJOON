@@ -1,0 +1,13 @@
+def solution():
+    numbers = []
+    sum = 0
+    for _ in range(5):
+        num = int(input())
+        numbers.append(num)
+        sum += num
+    average = sum / 5 # 평균
+    numbers.sort()
+    print(int(average))
+    print(numbers[2]) # 중앙값 출력
+
+solution()
