@@ -1,0 +1,15 @@
+import sys
+input = sys.stdin.readline
+# 일반적인 input() 함수는 한 줄의 입력을 받기 위해 더 많은 오버헤드가 발생하기 때문에, 더 많은 양의 입력을 처리할 때 비효율적
+# sys.stdin.readline은 C언어의 scanf와 유사한 방식으로 작동하여 속도 빠름
+def solution():
+    numbers = []
+    n = int(input())
+    for _ in range(n):
+        num = int(input())
+        numbers.append(num)
+    numbers.sort() # 오름차순 정렬
+    for i in range(len(numbers)):
+        print(numbers[i])
+
+solution()
