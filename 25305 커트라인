@@ -1,0 +1,7 @@
+def solution():
+    n, k = map(int, input().split())
+    L = list(map(int, input().split())) # list에 여러 개의 정수 입력받아 저장
+    L.sort(reverse = True) # 내림 차순으로 정렬
+    print(L[k-1])
+
+solution()
