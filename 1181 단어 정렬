@@ -1,0 +1,16 @@
+import sys
+input = sys.stdin.readline
+
+def solution():
+    n = int(input())
+    L = []
+    for i in range(n):
+        word = str(input().strip())
+        L.append(word)
+    L = list(set(L)) # 중복 단어 제거
+    L.sort(key=lambda L_len: (len(L_len), L_len)) # 단어의 길이를 기준으로 정렬, 같으면 사전 순으로 정렬
+    for i in range(len(L)):
+        print(L[i])
+
+solution()
+
