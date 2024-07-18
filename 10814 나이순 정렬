@@ -1,0 +1,15 @@
+import sys
+input = sys.stdin.readline
+
+def solution():
+    n = int(input())
+    L = []
+    for i in range(n):
+        age, name = map(str, input().split())
+        age = int(age) # 문자열로 입력받은 나이를 정수로 변환
+        L.append((age, i, name)) # 나이, 가입 순서, 이름 순으로 list에 저장
+    L.sort(key=lambda members: (members[0], members[1])) # lambda 함수를 사용하여 나이에 대해 먼저 정렬하고, 나이가 같으면 가입 순서대로 정렬
+    for i in range(n):
+        print(L[i][0], L[i][2])
+
+solution()
