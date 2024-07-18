@@ -1,0 +1,17 @@
+import sys
+input = sys.stdin.readline
+max_value = 10000
+
+def solution(): # Counting Sort : 정수 정렬 알고리즘, 각 숫자의 발생 빈도를 세고, 이를 이용하여 정렬된 배열을 만드는 것
+    count = [0] * (max_value + 1) # 초기화
+    n = int(input())
+    for _ in range(n):
+        num = int(input())
+        count[num] += 1 # 입력된 정수 발생 빈도 세기
+
+    for i in range(max_value + 1):
+        if count[i] != 0: # 발생 빈도가 0이 아닌 경우
+            for j in range(count[i]): # 발생 빈도만큼 반복
+                print(i)
+
+solution()
