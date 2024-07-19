@@ -1,0 +1,12 @@
+def solution():
+    alphabet = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
+    result = 0
+    word = input().strip()
+    for char in word: # word의 각 문자 char 순회
+        for i, group in enumerate(alphabet, 3): # enumerate 함수를 사용하여 group 번호 3부터 시작 ('ABC' 중 하나를 입력 시 3초가 걸리므로)
+            if char in group: # 현재 문자가 group 내에 있는지 확인
+                result += i
+                break
+    print(result)
+
+solution()
