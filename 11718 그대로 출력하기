@@ -1,0 +1,7 @@
+def solution():
+    while True:
+        try:
+            print(input())
+        except EOFError: # 예외 처리
+            break
+solution()
