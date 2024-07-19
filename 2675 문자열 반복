@@ -1,0 +1,14 @@
+def solution():
+    results = []
+    n = int(input())
+    for i in range(n):
+        r, s = map(str, input().split())
+        result = '' # 빈 문자열 초기화
+        for j in s:
+            result += j * int(r) # 각 문자 r번 반복
+        results.append(result)
+
+    for result in results:
+        print(result)
+
+solution()
