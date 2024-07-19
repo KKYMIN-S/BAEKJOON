@@ -1,0 +1,10 @@
+def solution():
+    alphabet = list('abcdefghijklmnopqrstuvwxyz') # 문자를 하나씩 분리하여 list의 각 index로 만듦
+    s = str(input().strip())
+    for i in alphabet:
+        if i in s:
+            print(s.index(i), end=' ') # index 함수로 지정된 index 찾기, 공백 문자 추가
+        else:
+            print(-1, end=' ')
+
+solution()
