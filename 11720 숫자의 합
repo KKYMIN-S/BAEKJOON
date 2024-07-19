@@ -1,0 +1,10 @@
+def solution():
+    n = int(input())
+    sum_numbers = 0
+    numbers = list(range(n))
+    numbers = str(input().strip()) # 공백없이 문자열로 입력받기
+    for i in range(n):
+        sum_numbers = sum_numbers + int(numbers[i])
+    print(sum_numbers)
+
+solution()
