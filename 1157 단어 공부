@@ -1,0 +1,23 @@
+def solution():
+    count = [0] * 26
+    word = input().upper() # 대문자로 입력받기
+    for char in word:
+        index = ord(char) - ord('A') # 문자열을 아스키코드로 형변환
+        count[index] += 1
+    max_value = max(count)
+    L = [i for i in range(len(count)) if count[i] == max_value] # List Comprehension
+    # if count[i] == max_value 조건을 만족하는 경우에만 i가 새로운 리스트 L에 추가
+    if len(L) > 1:
+        print("?")
+    else:
+        print(chr(L[0] + 65)) # 아스키코드를 문자열로 형변환
+solution()
+
+# List Comprehension : 기존 리스트를 기반으로 새로운 리스트를 만들 때 사용하는 간결한 문법
+"""
+기본 형식: [expression for item in iterable if condition]
+expression: 각 반복에서 계산하여 새 리스트의 요소로 추가할 값입니다.
+item: 현재 반복의 요소입니다.
+iterable: 순회할 수 있는 객체(예: 리스트, 문자열, 튜플 등)입니다.
+condition (선택 사항): 각 반복에서 item이 조건을 만족할 때만 expression을 평가하여 새 리스트에 추가합니다.
+"""
