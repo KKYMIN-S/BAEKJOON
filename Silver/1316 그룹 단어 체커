@@ -1,0 +1,19 @@
+def solution():
+    n = int(input())
+    stack = []
+    count = 0
+    for _ in range(n):
+        word = list(input())
+
+        stack.clear() # stack 초기화
+        for char in word:
+            if stack and stack[-1] == char: # 알파벳이 연속으로 반복되는 경우
+                stack.pop() # stack의 마지막 원소 제거
+
+            stack.append(char)
+
+        if len(stack) == len(set(stack)): # 원래 stack의 길이와 중복 원소를 제거한 stack의 길이가 다른 경우
+            count += 1
+
+    print(count)
+solution()
